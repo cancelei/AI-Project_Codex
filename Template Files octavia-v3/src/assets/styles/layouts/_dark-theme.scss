@@ -1,0 +1,246 @@
+// colors
+$lighter: rgba(255, 255, 255, 0.87);
+$sidebarLink: rgba(255, 255, 255, 0.74);
+$primary: #0a68ff;
+$dark: #121314;
+$cardColor: #212121;
+$foreground: #1d1f20;
+$transition: all 0.2s ease-in;
+$background: #eef6fd;
+$backgroundHover: rgba(255, 255, 255, 0.08);
+$backgroundActive: rgba(255, 255, 255, 0.12);
+.v-theme--dark {
+  .app-admin-wrap-layout {
+    background-color: $dark !important;
+
+    .sidebar-content-wrap {
+      .sidebar {
+        background-color: $foreground !important;
+        .group-name {
+          color: rgba(255, 255, 255, 0.87) !important;
+        }
+        .sidebar-radio-button {
+          background-color: $primary;
+        }
+        //   start::router-links
+        ul.nav-links {
+          li {
+            a {
+              color: $sidebarLink !important;
+              transition: $transition;
+              border-left: 2px solid $foreground !important;
+              font-weight: 500;
+            }
+            &.single-link {
+              border-radius: 0.5rem;
+
+              &:hover {
+                background-color: $backgroundHover !important;
+              }
+              &.active {
+                background-color: $backgroundActive !important;
+
+                a {
+                  color: $primary !important;
+                  font-weight: 600;
+                }
+              }
+            }
+
+            &.dropdown-link {
+              .sub-menu {
+                color: $sidebarLink !important;
+
+                &:hover {
+                  background-color: $backgroundHover !important;
+                }
+              }
+              &.active {
+                //  box-shadow: 0px 4px 28px 3px rgba(28, 85, 128, 0.15);
+                box-shadow: none;
+                .sub-menu {
+                  color: $primary;
+                  background-color: $backgroundActive !important;
+                }
+                ul {
+                  // display: block;
+                  opacity: 1;
+                }
+              }
+            }
+
+            ul {
+              li {
+                cursor: pointer;
+
+                a {
+                  color: $sidebarLink;
+                  display: block;
+                  transition: $transition;
+                  padding: 10px;
+                  border-left: 2px solid $foreground !important;
+                  border-radius: 0.5rem;
+                  &:hover {
+                    background-color: $backgroundHover !important;
+                  }
+                  &.active {
+                    background-color: $backgroundActive !important;
+                    color: $primary;
+                    font-weight: 600;
+                  }
+                }
+              }
+            }
+          }
+        }
+        //   end::router-links
+        ul.nav-links li ul li a.active[data-v-583d886c] {
+          color: #0a68ff !important;
+        }
+      }
+    }
+  }
+  .bg-white {
+    background-color: $cardColor;
+  }
+  .text-dark {
+    color: $sidebarLink !important;
+  }
+  .bb-secondary {
+    border-bottom: 1px solid $backgroundActive;
+  }
+
+  // datable
+  .vtl-tbody-tr {
+    background-color: $cardColor !important;
+  }
+  .vtl-table .vtl-thead .vtl-thead-th {
+    color: $lighter !important;
+    border-bottom: 1px solid $backgroundActive !important;
+  }
+
+  .table {
+    color: $sidebarLink;
+    .card {
+      background-color: $foreground;
+      .vtl-thead-tr {
+        background-color: $cardColor;
+      }
+      .vtl-table .vtl-thead .vtl-thead-th {
+        color: $lighter;
+      }
+      .vtl-thead-column {
+        color: $lighter;
+      }
+      .vtl-table .vtl-thead .vtl-thead-th {
+        border-bottom: 1px solid $backgroundActive;
+      }
+      .vtl-tbody-td span {
+        color: $sidebarLink;
+      }
+      .vtl-tbody-tr {
+        border-bottom: 1px solid $backgroundActive !important;
+      }
+      .vtl-tbody-td {
+        border-bottom: 1px solid $backgroundActive !important;
+      }
+      .vtl-table td {
+        color: $sidebarLink;
+      }
+      // pagination
+      .page-item .page-link {
+        color: #6c757d;
+
+        background-color: $cardColor;
+        border-color: #dee2e6;
+      }
+    }
+  }
+
+  // box
+  .box-wrapper {
+    .box-sidebar {
+      border-radius: 8px;
+      background-color: $cardColor !important;
+      .sidebar-link {
+        color: $sidebarLink;
+      }
+      .sidebar-link.active {
+        background-color: $backgroundActive;
+        color: $primary;
+      }
+      .sidebar-link:hover {
+        background-color: $backgroundHover !important;
+      }
+      .account-link.router-link-active {
+        background-color: $backgroundActive;
+        color: #1d4ed8 !important;
+        border-left: 4px solid #1d4ed8 !important;
+      }
+      .account-link {
+        color: $sidebarLink !important;
+      }
+      .account-link:hover {
+        background-color: $backgroundHover !important;
+        color: #1d4ed8;
+        border-left: 4px solid #1d4ed8;
+      }
+    }
+    .box-container {
+      background-color: $cardColor !important;
+    }
+  }
+
+  // base-card
+  .card-header {
+    border-bottom: 1px solid $backgroundActive !important;
+    i {
+      color: $lighter;
+    }
+    .card-title {
+      color: $lighter !important;
+    }
+  }
+
+  // profile
+  .account-link-list a {
+    &.router-link-active {
+      color: #1d4ed8 !important;
+    }
+
+    color: $sidebarLink !important;
+  }
+
+  // activity
+  .vertical-timeline[data-v-20c3b322]::after {
+    background-color: $backgroundActive;
+  }
+
+  // chat-box
+  .chat-box-wrapper {
+    .chat-box-sidebar {
+      background-color: $cardColor !important;
+    }
+    .chat-box-main-content {
+      background-color: $cardColor !important;
+    }
+    .chat-box-rightbar {
+      background-color: $cardColor !important;
+    }
+  }
+
+  // dropdown menu
+  .notification-menu {
+    background-color: $foreground !important;
+    color: $lighter !important;
+  }
+  .profile-menu {
+    background-color: $foreground !important;
+    color: $lighter !important;
+  }
+  .avatar-group-32 {
+    .avatar {
+      background-color: $backgroundHover !important;
+    }
+  }
+}

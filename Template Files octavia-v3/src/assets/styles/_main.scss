@@ -1,0 +1,152 @@
+/*
+ * File: _main.scss
+ * Project: Nitro-Admin-Pro
+ * File Created: Tuesday, 28th June 2022 6:07:46 pm
+ * Author: Naime Hossain & ui-lib -> https://ui-lib.com/ (support@ui-lib.com)
+ * -----
+ * Last Modified: Monday, 3rd October 2022 2:06:28 pm
+ * Modified By: Naime Hossain & ui-lib -> https://ui-lib.com/ (support@ui-lib.com>)
+ * -----
+ * Copyright 2019 - 2022 ui-lib  , ui-lib  ( https://ui-lib.com/ )
+ */
+
+
+ 
+// @use "vuetify/styles" with (
+//   $color-pack: false,
+//   $body-font-family: "Montserrat",
+//   $font-size-root: 16px
+// );
+
+$font-family: "Montserrat";
+
+
+
+$sizes: (
+  "display-1": 44px,
+  
+  "display-2": 40px,
+  "display-3": 30px,
+  "h1": 32px,
+  "h2": 24px,
+  "h3": 18px,
+  "h4": 16px,
+  "h5": 14px,
+  "h6": 12px,
+  "text-10": 10px,
+  "text-13": 13px,
+  "text-18": 18px,
+  "text-20": 20px,
+  "text-24": 24px,
+  "body-text-1": 10px,
+);
+
+@each $pixel, $size in $sizes {
+  .#{$pixel} {
+    font-size: $size;
+  }
+}
+// .text-18 {
+//   font-size: 18px;
+// }
+.flex-1 {
+  flex: 1;
+}
+
+.text-10 {
+  font-size: 10px;
+}
+.v-card__underlay {
+  display: none !important;
+}
+.avatar-group-32 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  .avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+    margin-left: -8px;
+    background-color: #e5f3fd;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.bb-secondary {
+  border-bottom: 1px solid #dbe9f2;
+}
+.p-card {
+  padding: 1.25rem;
+}
+.line-color {
+  color: #dbe9f2;
+}
+// small-circle
+.product-btn-group {
+  border: 1px solid #dee2e6 !important;
+  border-radius: 8px;
+  flex: none !important;
+}
+.bg-white {
+  background-color: #fff;
+}
+.border-primary {
+  border: 1px solid #0a68ff;
+}
+.text-white {
+  color: #fff;
+}
+.border-secondary {
+  border: 1px solid #dbe9f2;
+}
+
+.f-600 {
+  font-weight: 600;
+}
+
+// avatar-group   32----
+.avatar-group-32 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  .avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+    margin-left: -8px;
+    background-color: #e5f3fd;
+    box-sizing: content-box;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 100%;
+      text-align: center;
+      object-fit: cover;
+      color: transparent;
+      border-radius: 50%;
+    }
+  }
+}
+.w-full {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.v-application {
+ 
+  font-family: $font-family, sans-serif !important;
+}
+
+[class*="text-"] {
+  font-family: $font-family, sans-serif !important;
+}
+
+@import "layouts/layouts";

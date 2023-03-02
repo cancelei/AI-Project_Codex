@@ -5,10 +5,27 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Alegreya Sans", sans-serif;
+  list-style-type:none;
 }
 
 body {
   background: #343541;
+}
+
+.navbar__top {
+  display: none;
+}
+/* Creating new nav bar PC with empty options*/
+@media only screen and (min-width: 768px) {
+  .navbar__top {
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar__top > * {
+    margin: 3% 5%;
+    display: none;
+  }
 }
 
 #app {
@@ -101,7 +118,7 @@ body {
    * The pre-wrap value allows the browser to wrap long lines of text onto multiple lines if necessary.
    * The default value for the white-space property in CSS is "normal". This tells the browser to collapse multiple white space characters into a single space, and to wrap text onto multiple lines as needed to fit within its container.
   */
-  white-space: pre-wrap; 
+  white-space: pre-wrap;
 
   -ms-overflow-style: none;
   scrollbar-width: none;
